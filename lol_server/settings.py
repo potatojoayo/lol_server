@@ -25,24 +25,25 @@ SECRET_KEY = 'django-insecure-_6zc&$9l4ym=6%s0#%l&^2nkzis(%yf&*w%o2007bu$$zfm7rs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+'''
 ALLOWED_HOSTS = [ 
     "localhost",
     "landonleaves.com"
-]
+]'''
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    'http://127.0.0.1:3000',
     "https://landonleaves.com" 
 ]
 
-
+'''
 CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:3000',
+    "http://localhost:3000",
     "https://landonleaves.com"
-]
+]'''
 
-CSRF_COOKIE_DOMAIN = '.landonleaves.com'
+
+#CSRF_COOKIE_DOMAIN = '.landonleaves.com'
 
 
 CORS_ALLOW_CREDENTIALS = True
