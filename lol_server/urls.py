@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
-from user.views import LoginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +25,4 @@ urlpatterns = [
     path('q/',include('qna.urls')),
     path('r/',include('review.urls')),
     path('u/',include('user.urls')),
-    path('login/', LoginView.as_view(), name='user-login')
 ]

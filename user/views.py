@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 from .serializers.login import LoginSerializer
 from .serializers.customer import CustomerSerializer
 from rest_framework.response import Response
-from django.contrib.auth import login
+from django.contrib.auth import login 
 
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import ensure_csrf_cookie,csrf_protect
