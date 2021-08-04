@@ -31,10 +31,12 @@ ALLOWED_HOSTS = [
     "landonleaves.com"
 ]'''
 
+'''
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://landonleaves.com" 
 ]
+'''
 
 '''
 CSRF_TRUSTED_ORIGINS = [
@@ -46,7 +48,7 @@ CSRF_TRUSTED_ORIGINS = [
 #CSRF_COOKIE_DOMAIN = '.landonleaves.com'
 
 
-CORS_ALLOW_CREDENTIALS = True
+#CORS_ALLOW_CREDENTIALS = True
 
 
 # Application definition
@@ -125,9 +127,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lol',
         'USER': 'waterdeer',
-        'HOST':'localhost',
-        'PORT':'5432',
-        'PASSWORD':'rhfksl'
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'PASSWORD': 'rhfksl'
     }
 }
 
