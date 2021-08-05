@@ -20,9 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api-auth/",include("rest_framework.urls")), 
     path('p/',include('product.urls')), 
-    path('accounts/', include('django.contrib.auth.urls')), 
     path('o/',include('order.urls')),
     path('q/',include('qna.urls')),
     path('r/',include('review.urls')),
     path('u/',include('user.urls')),
+    path('rest-auth/',include('rest_auth.urls')),
 ]

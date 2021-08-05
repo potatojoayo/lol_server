@@ -1,5 +1,4 @@
 from .viewsets import ProductViewSet,CategoryViewSet,BrandViewSet,ColorViewSet,SizeViewSet
-from .viewsets.product import home
 from rest_framework import routers
 from django.urls import path, include
 
@@ -13,6 +12,5 @@ router.register('size',SizeViewSet,basename='size')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('home/',home,name="home")
 ]
 
