@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate
-from rest_framework import serializers 
+from rest_framework import serializers
 from django.contrib.auth import hashers
 
-class LoginSerializer(serializers.Serializer): 
+
+class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField()
 
@@ -16,5 +17,4 @@ class LoginSerializer(serializers.Serializer):
         if not user.is_active:
             raise serializers.ValidationError('User is disabled.')
 
-        return {'user': user}    
-    
+        return {'user': user}
