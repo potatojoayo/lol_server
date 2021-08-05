@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from rest_framework.authtoken.models import Token
 from product.models import Product
+
     
 class UserManager(BaseUserManager):
 

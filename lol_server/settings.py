@@ -25,26 +25,13 @@ SECRET_KEY = 'django-insecure-_6zc&$9l4ym=6%s0#%l&^2nkzis(%yf&*w%o2007bu$$zfm7rs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-'''
-ALLOWED_HOSTS = [ 
-    "localhost",
-    "landonleaves.com"
-]'''
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://landonleaves.com" 
+ALLOWED_HOSTS = [ 
 ]
 
-'''
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-    "https://landonleaves.com"
-]'''
-
-
-#CSRF_COOKIE_DOMAIN = '.landonleaves.com'
-
+CORS_ALLOWED_ORIGINS = [
+        'https://localhost:3000'
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -58,7 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_auth',
+    'sslserver',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'product',
     'user',
@@ -76,10 +66,15 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication'
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
+REST_AUTH_SERIALIZERS={
+    'LOGIN_SERIALIZER':'user.serializers.LoginSerializer',
+    'USER_DETAILS_SERIALIZER':'user.serializers.CustomerSerializer'
+}
+
 
 AUTH_USER_MODEL = 'user.User'
 
