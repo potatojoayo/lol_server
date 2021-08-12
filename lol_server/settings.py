@@ -26,11 +26,11 @@ SECRET_KEY = 'django-insecure-_6zc&$9l4ym=6%s0#%l&^2nkzis(%yf&*w%o2007bu$$zfm7rs
 DEBUG = True
 
 
-ALLOWED_HOSTS = [ 
+ALLOWED_HOSTS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-        'https://localhost:3000'
+    'https://localhost:3000'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -70,9 +70,9 @@ REST_FRAMEWORK = {
     ]
 }
 
-REST_AUTH_SERIALIZERS={
-    'LOGIN_SERIALIZER':'user.serializers.LoginSerializer',
-    'USER_DETAILS_SERIALIZER':'user.serializers.CustomerSerializer'
+REST_AUTH_SERIALIZERS = {
+    'LOGIN_SERIALIZER': 'user.serializers.LoginSerializer',
+    'USER_DETAILS_SERIALIZER': 'user.serializers.CustomerSerializer'
 }
 
 
@@ -120,9 +120,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lol',
         'USER': 'waterdeer',
-        'HOST':'localhost',
-        'PORT':'5432',
-        'PASSWORD':'rhfksl'
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'PASSWORD': 'rhfksl'
     }
 }
 
